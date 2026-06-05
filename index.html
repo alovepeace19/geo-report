@@ -376,58 +376,62 @@
 
 </section>
 
-      <!-- Explainer Audit Alert: Why there is a difference -->
-      <section class="bg-gradient-to-r from-brandRed/10 to-brandOrange/10 rounded-xl border border-panelBorder p-5 mb-8">
-        <div class="flex flex-col sm:flex-row items-start sm:items-center gap-4">
-          <div class="w-12 h-12 rounded-full bg-brandOrange/10 border border-brandOrange/30 flex items-center justify-center text-brandOrange shrink-0">
-            <i class="fa-solid fa-circle-info text-xl"></i>
-          </div>
-          <div>
-            <h4 class="text-sm font-extrabold tracking-wide uppercase text-creamText flex items-center gap-2">
-              <span>数据监测源审计差异释义 (Tracking Source Audit Note)</span>
-              <span class="px-2 py-0.5 rounded text-[9px] font-black bg-brandOrange text-darkBg">专业审计</span>
-            </h4>
-            <p class="text-xs text-creamMuted mt-1.5 leading-relaxed">
-              因官网上线（第1天）到网站流量追踪代码正式布设（第15天）存在时间差，因此：
-              <br class="hidden sm:inline">
-              1. <strong class="text-creamText">谷歌搜索引擎数据 (45天)</strong>：自网站在 Google 自动建立索引第一天起即由系统后台自动累积。
-              <br class="hidden sm:inline">
-              2. <strong class="text-creamText">全网独立访客流量 (30天)</strong>：自代码在网页中正式生效至今，完整记录近 30 天内全渠道的<strong>独立进站访客大盘（含AI推荐、社交媒体等）</strong>。
-            </p>
-          </div>
-        </div>
-      </section>
+<!-- Full Channel Traffic Source Breakdown -->
+<section class="bg-panelBg rounded-xl border border-panelBorder p-5 mb-8">
 
-<!-- Visual Breakdown Segment: Google vs. Other Channels -->
-<section class="bg-panelBg rounded-xl border border-panelBorder p-5 mb-10">
-  <h3 class="text-xs font-black tracking-wider uppercase text-brandRed mb-3 flex items-center gap-1.5">
+  <h3 class="text-xs font-black tracking-wider uppercase text-brandRed mb-4 flex items-center gap-1.5">
     <i class="fa-solid fa-chart-bar"></i>
-    <span>全网流量来源比例拆解 (基于近30天3,000次独立访客周期对应数据)</span>
+    <span>全网流量来源结构（近30天 3,000次独立访客）</span>
   </h3>
-  
-  <!-- Multi-colored Segment Bar -->
-  <div class="w-full bg-darkBg h-6 rounded-lg overflow-hidden flex border border-panelBorder/40">
-    <div class="bg-brandRed h-full transition-all duration-500 flex items-center justify-center" id="bar-google" style="width: 37%;">
-      <span class="text-[10px] text-creamText font-black hidden sm:inline">Google 来源合计 (37%)</span>
+
+  <!-- Main Message -->
+  <div class="mb-5 p-4 rounded-xl bg-brandRed/5 border border-brandRed/20">
+    <p class="text-sm text-creamText leading-relaxed">
+      <strong>Google 搜索已不再是唯一入口。</strong>
+      在近30天的 3,000 次独立访客中，Google 搜索直接带来
+      <strong class="text-brandRed">1,110 次访问（37%）</strong>；
+      其余
+      <strong class="text-brandOrange">1,890 次访问（63%）</strong>
+      来自 AI 推荐、直接访问、社交媒体分享及品牌搜索等多元渠道。
+    </p>
+  </div>
+
+  <!-- Segment Bar -->
+  <div class="w-full bg-darkBg h-7 rounded-lg overflow-hidden flex border border-panelBorder/40 mb-4">
+    <div class="bg-brandRed h-full flex items-center justify-center" style="width: 37%;">
+      <span class="text-[10px] text-white font-black hidden sm:inline">
+        Google 搜索 37%
+      </span>
     </div>
 
-    <div class="bg-zinc-800 h-full transition-all duration-500 flex items-center justify-center" id="bar-direct" style="width: 63%;">
-      <span class="text-[10px] text-creamMuted font-black hidden sm:inline">直接访问 / 社交媒体 / AI 推荐等 (63%)</span>
+    <div class="bg-white/10 h-full flex items-center justify-center" style="width: 63%;">
+      <span class="text-[10px] text-creamText font-black hidden sm:inline">
+        AI推荐 / 品牌搜索 / 社交分享 63%
+      </span>
     </div>
   </div>
-  
-  <!-- Mobile/Compact Legend -->
-  <div class="grid grid-cols-1 sm:grid-cols-2 gap-2 mt-3 text-[11px] text-creamMuted">
-    <div class="flex items-center gap-1.5">
-      <span class="w-2.5 h-2.5 bg-brandRed rounded-sm"></span>
-      <span>Google 来源合计 (30天): <strong id="lbl-google-clicks">1,110</strong> 次</span>
+
+  <!-- Legend -->
+  <div class="grid grid-cols-1 md:grid-cols-2 gap-3 text-xs mb-5">
+    <div class="flex items-center gap-2 text-creamMuted">
+      <span class="w-3 h-3 rounded-sm bg-brandRed"></span>
+      <span>Google 搜索直接流量：<strong class="text-creamText">1,110 次</strong></span>
     </div>
 
-    <div class="flex items-center gap-1.5">
-      <span class="w-2.5 h-2.5 bg-zinc-800 rounded-sm"></span>
-      <span>其他渠道来源 (30天): <strong id="lbl-other-visits">1,890</strong> 次</span>
+    <div class="flex items-center gap-2 text-creamMuted">
+      <span class="w-3 h-3 rounded-sm bg-white/20"></span>
+      <span>AI推荐 / 品牌搜索 / 社交分享：<strong class="text-creamText">1,890 次</strong></span>
     </div>
   </div>
+
+  <!-- Insight -->
+  <div class="p-4 bg-brandOrange/10 border-l-4 border-brandOrange rounded-r-lg text-xs text-creamMuted leading-relaxed">
+    <strong class="text-creamText">GEO 成熟度判断：</strong>
+    当网站内容被 Google 建立基础权威度后，相关信息开始被 ChatGPT、Google AI Mode、
+    社交平台及品牌搜索持续引用与放大。这代表流量来源已从单一搜索引擎，
+    扩展为「搜索 + AI 推荐 + 品牌认知」的复合增长网络。
+  </div>
+
 </section>
 
 <!-- Interactive Customer Conversion Funnel -->
