@@ -875,33 +875,33 @@
         </div>
       </div>
 
-      <!-- Slider 3: Fulfillment Rate (到店率) -->
-      <div>
-        <div class="flex justify-between items-center mb-2">
-          <label for="slider-fulfillment" class="text-xs font-bold text-creamText flex items-center gap-2">
-            <i class="fa-solid fa-store text-brandOrange"></i>
-            <span>预计预订到店率 (Fulfillment Rate)</span>
-          </label>
-          <span class="text-brandOrange font-mono font-bold text-sm" id="val-fulfillment">75%</span>
-        </div>
+<!-- Slider 3: Booking Fulfillment Rate -->
+<div>
+  <div class="flex justify-between items-center mb-2">
+    <label for="slider-fulfillment" class="text-xs font-bold text-creamText flex items-center gap-2">
+      <i class="fa-solid fa-store text-brandOrange"></i>
+      <span>预订客户实际到店率 (Fulfillment Rate)</span>
+    </label>
+    <span class="text-brandOrange font-mono font-bold text-sm" id="val-fulfillment">75%</span>
+  </div>
 
-        <input
-          type="range"
-          id="slider-fulfillment"
-          min="10"
-          max="100"
-          step="5"
-          value="75"
-          class="w-full accent-brandOrange bg-darkBg border border-panelBorder rounded-md h-1.5 appearance-none cursor-pointer"
-          oninput="calculateROI()"
-        >
+  <input
+    type="range"
+    id="slider-fulfillment"
+    min="50"
+    max="100"
+    step="5"
+    value="75"
+    class="w-full accent-brandOrange bg-darkBg border border-panelBorder rounded-md h-1.5 appearance-none cursor-pointer"
+    oninput="calculateROI()"
+  >
 
-        <div class="flex justify-between text-[10px] text-creamDark mt-1">
-          <span>10% (极保守)</span>
-          <span>75% (当前预设)</span>
-          <span>100% (全部到店)</span>
-        </div>
-      </div>
+  <div class="flex justify-between text-[10px] text-creamDark mt-1">
+    <span>50% (较低履约)</span>
+    <span>75% (行业平均)</span>
+    <span>100% (全部到店)</span>
+  </div>
+</div>
 
       <!-- Slider 4: Avg Ticket Size (客单价) -->
       <div>
@@ -950,7 +950,7 @@
 
           <!-- Projected Group Visits -->
           <div class="flex justify-between items-center">
-            <span class="text-xs text-creamMuted">预计到店组数：</span>
+            <span class="text-xs text-creamMuted">预计到店消费：</span>
             <span class="text-lg font-bold font-mono text-creamText" id="res-visits">383 组</span>
           </div>
 
@@ -1435,7 +1435,7 @@ function calculateROI() {
   const revenue = Math.round(groupVisits * ticketValue);
 
   document.getElementById('val-traffic').textContent = traffic.toLocaleString();
-  document.getElementById('val-conversion').textContent = (conversion * 100).toFixed(1) + '%';
+  document.getElementById('val-conversion').textContent = (conversion * 100).toFixed(1).replace('.0', '') + '%';
   document.getElementById('val-fulfillment').textContent = Math.round(fulfillment * 100) + '%';
   document.getElementById('val-ticket').textContent = '$' + ticketValue.toLocaleString();
 
