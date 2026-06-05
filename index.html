@@ -265,6 +265,157 @@
 
       </div>
 
+      <!-- Google Places Visibility Preview -->
+<section class="bg-panelBg rounded-xl border border-panelBorder p-6 mb-10">
+  <div class="border-b border-panelBorder/30 pb-4 mb-6">
+    <div class="flex items-center gap-2.5">
+      <div class="w-8 h-8 rounded bg-brandRed/10 flex items-center justify-center text-brandRed">
+        <i class="fa-brands fa-google text-sm"></i>
+      </div>
+      <div>
+        <h3 class="text-lg font-bold tracking-tight text-creamText font-display uppercase">
+          Google Places 首页推荐位展示
+        </h3>
+        <p class="text-xs text-creamDark mt-0.5">
+          搜索 “ayce vancouver” 时，Hot Spot Buffet 已进入 Google Places 第一屏推荐位。
+        </p>
+      </div>
+    </div>
+  </div>
+
+  <div class="bg-[#f8fafd] rounded-xl overflow-hidden border border-panelBorder">
+    <!-- Google Search Top Bar -->
+    <div class="bg-white px-5 py-4 border-b border-gray-200">
+      <div class="flex items-center gap-4">
+        <div class="text-2xl font-bold tracking-tight">
+          <span class="text-blue-600">G</span><span class="text-red-500">o</span><span class="text-yellow-500">o</span><span class="text-blue-600">g</span><span class="text-green-600">l</span><span class="text-red-500">e</span>
+        </div>
+
+        <div class="flex-1 max-w-xl bg-white border border-gray-300 rounded-full px-4 py-2 flex items-center justify-between shadow-sm">
+          <span class="text-sm text-gray-800">ayce vancouver</span>
+          <div class="flex items-center gap-3 text-gray-500">
+            <i class="fa-solid fa-xmark text-xs"></i>
+            <i class="fa-solid fa-microphone text-xs"></i>
+            <i class="fa-solid fa-magnifying-glass text-xs"></i>
+          </div>
+        </div>
+      </div>
+
+      <div class="flex gap-6 mt-4 text-xs text-gray-500 pl-[128px]">
+        <span class="text-gray-900 border-b-2 border-gray-900 pb-2">All</span>
+        <span>Images</span>
+        <span>Short videos</span>
+        <span>Videos</span>
+        <span>Maps</span>
+        <span>Shopping</span>
+      </div>
+    </div>
+
+    <!-- Google Places Content -->
+    <div class="grid grid-cols-1 lg:grid-cols-12 gap-0">
+      <!-- Left: Places List -->
+      <div class="lg:col-span-6 bg-white p-6">
+        <div class="text-sm text-gray-700 mb-5 flex items-center gap-2">
+          <i class="fa-solid fa-location-dot"></i>
+          <span class="font-semibold">Vancouver, BC</span>
+        </div>
+
+        <h4 class="text-2xl text-gray-900 mb-5">Places</h4>
+
+        <!-- Place Item 1 -->
+        <div class="flex gap-4 mb-6">
+          <div class="w-24 h-24 rounded-xl bg-gradient-to-br from-orange-200 to-red-300 shrink-0 overflow-hidden flex items-center justify-center text-red-700">
+            <i class="fa-solid fa-hotdog text-3xl"></i>
+          </div>
+
+          <div>
+            <h5 class="text-lg font-medium text-gray-900">
+              Hot Spot Buffet 黑牛の家
+            </h5>
+            <div class="text-sm text-gray-600 mt-1">
+              4.3 <span class="text-yellow-500">★★★★★</span> (570) · $20–40 · Self service restaurant
+            </div>
+            <div class="text-sm text-gray-600 mt-1">
+              3340 Kingsway #240
+            </div>
+            <div class="text-sm text-gray-500 mt-2">
+              “Their weekday lunch is really great value $25 for ayce bbq!”
+            </div>
+          </div>
+        </div>
+
+        <!-- Place Item 2 -->
+        <div class="flex gap-4 mb-6 opacity-80">
+          <div class="w-24 h-24 rounded-xl bg-gray-200 shrink-0 flex items-center justify-center text-gray-500">
+            <i class="fa-solid fa-utensils text-2xl"></i>
+          </div>
+
+          <div>
+            <h5 class="text-lg font-medium text-gray-900">Ten’ichi Izakaya AYCE</h5>
+            <div class="text-sm text-gray-600 mt-1">
+              4.5 <span class="text-yellow-500">★★★★★</span> (49) · $50–60 · Izakaya
+            </div>
+            <div class="text-sm text-gray-600 mt-1">Richmond, BC</div>
+          </div>
+        </div>
+
+        <!-- Place Item 3 -->
+        <div class="flex gap-4 opacity-80">
+          <div class="w-24 h-24 rounded-xl bg-gray-200 shrink-0 flex items-center justify-center text-gray-500">
+            <i class="fa-solid fa-bowl-food text-2xl"></i>
+          </div>
+
+          <div>
+            <h5 class="text-lg font-medium text-gray-900">Shabusen Yakiniku House</h5>
+            <div class="text-sm text-gray-600 mt-1">
+              4.0 <span class="text-yellow-500">★★★★☆</span> (4.9K) · $40–50 · Japanese
+            </div>
+            <div class="text-sm text-gray-600 mt-1">755 Burrard St #202</div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Right: Map Mock -->
+      <div class="lg:col-span-6 bg-[#d8f0f2] min-h-[420px] relative overflow-hidden">
+        <div class="absolute inset-0 opacity-40">
+          <div class="absolute top-16 left-8 w-[120%] h-1 bg-blue-300 rotate-12"></div>
+          <div class="absolute top-40 -left-10 w-[130%] h-1 bg-blue-300 -rotate-6"></div>
+          <div class="absolute bottom-24 left-0 w-[120%] h-1 bg-blue-300 rotate-3"></div>
+        </div>
+
+        <div class="absolute top-10 right-10 bg-white text-gray-700 px-3 py-2 rounded-full text-xs font-semibold shadow">
+          Open in Maps
+        </div>
+
+        <div class="absolute top-[46%] right-[22%]">
+          <div class="bg-white px-2 py-1 rounded-lg shadow text-xs text-gray-800 font-semibold">
+            4.3
+          </div>
+          <div class="w-4 h-4 bg-brandRed rounded-full border-2 border-white mx-auto mt-1"></div>
+          <div class="text-xs text-gray-800 font-semibold mt-1 bg-white/80 px-1 rounded">
+            Hot Spot Buffet
+          </div>
+        </div>
+
+        <div class="absolute top-[28%] left-[42%]">
+          <div class="bg-white px-2 py-1 rounded-lg shadow text-xs text-gray-800 font-semibold">4.6</div>
+          <div class="w-3 h-3 bg-brandOrange rounded-full border-2 border-white mx-auto mt-1"></div>
+        </div>
+
+        <div class="absolute bottom-[25%] left-[35%]">
+          <div class="bg-white px-2 py-1 rounded-lg shadow text-xs text-gray-800 font-semibold">4.5</div>
+          <div class="w-3 h-3 bg-brandOrange rounded-full border-2 border-white mx-auto mt-1"></div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="mt-4 p-4 bg-brandRed/5 border-l-4 border-brandRed rounded-r-lg text-xs text-creamMuted leading-relaxed">
+    <strong class="text-creamText">页面价值：</strong>
+    对于 “ayce vancouver” 这类非品牌高意向关键词，Hot Spot Buffet 不只是被搜索到，而是直接进入 Google Places 第一屏推荐区。这意味着用户还没进入官网前，品牌已经在本地搜索决策阶段获得优先曝光。
+  </div>
+</section>
+
       <!-- Explainer Audit Alert: Why there is a difference -->
       <section class="bg-gradient-to-r from-brandRed/10 to-brandOrange/10 rounded-xl border border-panelBorder p-5 mb-8">
         <div class="flex flex-col sm:flex-row items-start sm:items-center gap-4">
